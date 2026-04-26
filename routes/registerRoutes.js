@@ -5,7 +5,17 @@ const Register = require("../models/Register");
 //index page
 router.get('/',(req,res)=>{
     res.render('index')
-})
+});
+
+//login page
+router.get('/login',(req,res)=>{
+    res.render('login')
+});
+
+//password page
+router.get('/password',(req,res)=>{
+    res.render('password')
+});
 
 //add sales to the database
 router.get("/register", (req, res) => {
