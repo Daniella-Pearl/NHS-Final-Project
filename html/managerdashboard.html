@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NyondoStock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../public/css/dashboard.css" />
+     <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="brand">
+          <img
+            src="../public/images/generated-1774986091754.png"
+            alt="NyondoStock"
+            class="logo"
+          />
+          <h1>NyondoStock System</h1>
+          <p>Welcome back, Manager!</p>
+        </div>
+        <div class="nav-menu-container">
+        <a href="#" class="nav-link"
+          ><i class="fa fa-th-large"></i> <span>Dashboard</span></a
+        >
+        <a href="#" class="nav-link"
+          ><i class="fa fa-box"></i> <span>Stock Management</span></a
+        >
+        <a href="#" class="nav-link"
+          ><i class="fa fa-shopping-cart"></i> <span>Sales Management</span></a
+        >
+        <a href="#" class="nav-link"
+          ><i class="fa fa-users"></i> <span>Customer Scheme</span></a
+        >
+        <a href="#" class="nav-link"
+          ><i class="fa fa-chart-line"></i> <span>Reports</span></a>
+          <a href="./messages.html" class="nav-link"
+          ><i class="fa fa-comment-dots"></i> <span>Messages</span></a
+        >
+         <a href="./login.html" class="nav-link"
+          ><i class="fa fa-right-from-bracket"></i> <span>Log out</span></a
+        >
+</div>
+        <button class="btn-quick" type="button">+ QUICK ADD STOCK</button>
+      </nav>
+
+      <div class="main-content">
+        <header class="topbar">
+          <h2>Welcome, Manager!</h2>
+          <div class="user-info">
+            <span class="badge"
+              >Manager Account <i class="fa fa-circle-user"></i
+            ></span>
+          </div>
+        </header>
+
+        <div class="dashboard-body">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-top">
+                <h4>Today's Sales</h4>
+                <div class="stat-icon-wrap icon-blue">
+                  <i class="fa fa-coins stat-icon"></i>
+                </div>
+              </div>
+              <div class="value">250,000 <small>UGX</small></div>
+              <div class="trend" style="color: #2d703d">
+                <i class="fa fa-arrow-up"></i> 10% from yesterday
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-top">
+                <h4>Available Stock</h4>
+                <div class="stat-icon-wrap icon-green">
+                  <i class="fa fa-warehouse stat-icon"></i>
+                </div>
+              </div>
+              <div class="value">120 <small>Items</small></div>
+              <div class="trend" style="color: rgb(125, 93, 32)">
+                In 120 categories
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-top">
+                <h4>Active Customers</h4>
+                <div class="stat-icon-wrap icon-orange">
+                  <i class="fa fa-user-check stat-icon"></i>
+                </div>
+              </div>
+              <div class="value">45</div>
+              <div class="trend" style="color: var(--text-muted)">
+                Active today
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-top">
+                <h4>Credit Balance</h4>
+                <div class="stat-icon-wrap icon-red">
+                  <i class="fa fa-hand-holding-dollar stat-icon"></i>
+                </div>
+              </div>
+              <div class="value text-danger">800k <small>UGX</small></div>
+              <div class="trend text-danger critical">
+                <i class="fa fa-warning" style="color: red"></i> 5 Items
+                critical stock
+              </div>
+            </div>
+          </div>
+
+          <div class="content-grid">
+            <div class="content-box">
+              <h3>Sales Over the Week</h3>
+              <div class="chart-visual-container">
+                <div class="bar-chart">
+                  <div class="bar" style="--height: 60%" data-day="Mon"></div>
+                  <div class="bar" style="--height: 75%" data-day="Tue"></div>
+                  <div class="bar" style="--height: 90%" data-day="Wed"></div>
+                  <div class="bar" style="--height: 65%" data-day="Thu"></div>
+                  <div class="bar" style="--height: 85%" data-day="Fri"></div>
+                  <div
+                    class="bar"
+                    style="height: 100%"
+                    data-day="Sat"
+                  ></div>
+                </div>
+              </div>
+              <p class="sales-total">
+                <i class="fa fa-chart-line"></i> Sales:
+                <strong>UGX 2,500,000</strong> this week
+              </p>
+            </div>
+
+            <div class="content-box">
+              <h3>Stock Status</h3>
+              <div class="stock-visual-container">
+                <div class="stock-item">
+                  <span class="label">Cement</span>
+                  <div class="progress-bg">
+                    <div class="progress-bar danger" style="width: 20%"></div>
+                  </div>
+                </div>
+                <div class="stock-item">
+                  <span class="label">Iron Sheets</span>
+                  <div class="progress-bg">
+                    <div class="progress-bar success" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="stock-item">
+                  <span class="label">Paint</span>
+                  <div class="progress-bg">
+                    <div class="progress-bar warning" style="width: 45%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <h4>Quick Status</h4>
+              <table class="status-table">
+                <tr>
+                  <td>Cement</td>
+                  <td><span class="pill danger">Low Stock</span></td>
+                </tr>
+                <tr>
+                  <td>IronSheets</td>
+                  <td><span class="pill success">Paid</span></td>
+                </tr>
+                <tr>
+                  <td>Paint</td>
+                  <td><span class="pill warning">Credit</span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="content-grid">
+            <div class="content-box">
+              <h3>Recent Activity</h3>
+              <ul class="timeline">
+                <li class="timeline-item">
+                  <i class="fa fa-coins timeline-icon text-primary"></i>
+                  <div class="timeline-content">
+                    <p>Sale of 50,000 UGX to John</p>
+                    <span>5 minutes ago</span>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <i class="fa fa-plus-circle timeline-icon text-success"></i>
+                  <div class="timeline-content">
+                    <p>Added 50 bags of Sugar to stock</p>
+                    <span>30 minutes ago</span>
+                  </div>
+                </li>
+                <li class="timeline-item">
+                  <i class="fa fa-user-plus timeline-icon text-info"></i>
+                  <div class="timeline-content">
+                    <p>New customer Mary added</p>
+                    <span>1 hr ago</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="content-box">
+              <h3>Critical Alerts</h3>
+              <div class="critical">
+                <strong class="text-danger small"
+                  ><i class="fa fa-warning"></i> Low Stock:</strong
+                >
+                <p class="small">Cement - Only 10 Bags left</p>
+              </div>
+              <div class="pending">
+                <strong class="text-warning small"
+                  ><i class="fa fa-clock"></i> Pending Credit:</strong
+                >
+                <p class="small">John Doe owes 200,000 UGX</p>
+              </div>
+              <div class="transit">
+                <strong class="text-warning small"
+                  ><i class="fa fa-truck"></i> Pending Delivery</strong
+                >
+                <p class="small">12 Bags Of Cement to Peter J.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button class="btn-action btn-green">
+              <i class="fa fa-plus"></i> Add Sale
+            </button>
+            <button class="btn-action btn-blue">
+              <i class="fa fa-box"></i> Add Stock
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

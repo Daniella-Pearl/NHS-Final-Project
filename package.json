@@ -1,0 +1,31 @@
+{
+  "name": "nyondo-stock-final",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Daniella-Pearl/Nyondo-Stock-Final#readme",
+  "bugs": {
+    "url": "https://github.com/Daniella-Pearl/Nyondo-Stock-Final/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniella-Pearl/Nyondo-Stock-Final.git"
+  },
+  "license": "ISC",
+  "author": "Dharniellah",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mongoose": "^9.5.0",
+    "pug": "^3.0.4"
+  }
+}

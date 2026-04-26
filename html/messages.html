@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NyondoStock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../public/css/messages.css" />
+    <link rel="stylesheet" href="../public/css/dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="brand">
+          <img
+            src="../public/images/generated-1774986091754.png"
+            alt="NyondoStock"
+            class="logo"
+          />
+          <h1>NyondoStock System</h1>
+          <p>Messages Section</p>
+        </div>
+        <div class="nav-menu-container">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link">
+              <i class="fa fa-th-large"></i>
+              <span>Account</span>
+            </a>
+            <div class="roles">
+              <ul>
+                <div class="role">
+                  <li>
+                    <a href="/dashboard" class="role-item admin">Admin</a>
+                  </li>
+                </div>
+                <div class="role">
+                  <li>
+                    <a href="/mgrDashboard" class="role-item manager"
+                      >Manager</a
+                    >
+                  </li>
+                </div>
+                <div class="role">
+                  <li>
+                    <a href="/salesdashboard" class="role-item cashier"
+                      >Sales Management</a
+                    >
+                  </li>
+                </div>
+                <div class="role">
+                  <li>
+                    <a href="/stockmgtpage" class="role-item sales"
+                      >Stock Management</a
+                    >
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <a href="/index" class="nav-link"
+            ><i class="fa fa-right-from-bracket"></i> <span>Log out</span></a
+          >
+        </div>
+      </nav>
+      <div class="main-content">
+        <header class="topbar">
+          <h2>Messages</h2>
+        </header>
+
+        <div class="messaging-layout">
+          <aside class="chat-sidebar">
+            <div class="search-container">
+              <div class="search-input-wrapper">
+                <i class="fa fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search..." />
+              </div>
+            </div>
+            <div class="role-selector">
+              Filter by Role <i class="fa fa-caret-down"></i>
+            </div>
+
+            <div class="contact-list">
+              <div class="contact active">
+                <div class="avatar-box"></div>
+                <div class="contact-info">
+                  <div class="contact-top">
+                    <span class="contact-name">Evelyn</span>
+                    <span class="contact-time">11:30 AM</span>
+                  </div>
+                  <div class="contact-role">Admin</div>
+                  <p class="contact-preview">Please update the stock...</p>
+                </div>
+                <div class="badge">2</div>
+              </div>
+
+              <div class="contact">
+                <div class="avatar-box"></div>
+                <div class="contact-info">
+                  <div class="contact-top">
+                    <span class="contact-name">Alex</span>
+                    <span class="contact-time">11:00 AM</span>
+                  </div>
+                  <div class="contact-role">Manager</div>
+                  <p class="contact-preview">
+                    I'll follow up with the supplier...
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact">
+                <div class="avatar-box"></div>
+                <div class="contact-info">
+                  <div class="contact-top">
+                    <span class="contact-name">Sarah</span>
+                    <span class="contact-time">10:45 AM</span>
+                  </div>
+                  <div class="contact-role">Cashier</div>
+                  <p class="contact-preview">
+                    Can you check a transaction f...
+                  </p>
+                </div>
+                <div class="badge">1</div>
+              </div>
+
+              <div class="contact">
+                <div class="avatar-box"></div>
+                <div class="contact-info">
+                  <div class="contact-top">
+                    <span class="contact-name">Mike</span>
+                    <span class="contact-time">Yesterday</span>
+                  </div>
+                  <div class="contact-role">Salesperson</div>
+                  <p class="contact-preview">
+                    I've restocked the items you a...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <main class="chat-pane">
+            <div class="chat-pane-header">
+              <div class="header-avatar"></div>
+              <div>
+                <strong>Evelyn</strong>
+                <p>Admin •<span> Active 1 hour ago</span></p>
+              </div>
+            </div>
+
+            <div class="messages-container">
+              <div class="bubble received">
+                I've updated the records. How do they look?
+                <span class="timestamp">10:00 AM</span>
+              </div>
+
+              <div class="bubble sent">
+                The records look great! Can you also verify the supplier
+                payments?
+                <span class="timestamp">11:20 AM</span>
+              </div>
+
+              <div class="bubble received">
+                Sure, I'll confirm the supplier payments and let you know the
+                details soon.
+                <span class="timestamp">11:20 AM</span>
+              </div>
+
+              <div class="bubble sent">
+                Thank you!
+                <span class="timestamp">11:30 AM</span>
+              </div>
+            </div>
+
+            <div class="message-input-bar">
+              <i class="fa fa-face-smile"></i>
+              <input type="text" placeholder="Type a message..." />
+              <i class="fa fa-paperclip"></i>
+              <i class="fa fa-paper-plane" style="color: white"></i>
+            </div>
+          </main>
+
+          <aside class="roles-pane">
+            <div class="roles-card">
+              <h3><i class="fa fa-shield"></i> Staff Roles</h3>
+              <div class="role-btn admin">
+                <i class="fa fa-user-shield"></i> Admin
+              </div>
+              <div class="role-btn manager">
+                <i class="fa fa-briefcase"></i> Manager
+              </div>
+              <div class="role-btn cashier">
+                <i class="fa fa-money-bill-1-wave"></i> Cashier
+              </div>
+              <div class="role-btn sales">
+                <i class="fa fa-bullhorn"></i> Salesperson
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

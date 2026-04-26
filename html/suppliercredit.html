@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NyondoStock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../public/css/dashboard.css" />
+    <link rel="stylesheet" href="../public/css/stockmgt.css" />
+    <link rel="stylesheet" href="../public/css/suppliecredit.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="brand">
+          <img
+            src="../public/images/generated-1774986091754.png"
+            alt="NyondoStock"
+            class="logo"
+          />
+          <h1>NyondoStock System</h1>
+          <p>Stock Management</p>
+        </div>
+        <div class="nav-menu-container">
+          <a href="#" class="nav-link"
+            ><i class="fa fa-th-large"></i><span>Dashboard</span></a
+          >
+          <a href="./supplierreg.html" class="nav-link"
+            ><i class="fa fa-users"></i> <span>Supplier Registration</span></a
+          >
+          <a href="stockmgtpage.html#stform" class="nav-link"
+            ><i class="fa fa-box"></i> <span>Stock Management Form</span></a
+          >
+          <a href="./inventory.html" class="nav-link"
+            ><i class="fa fa-shopping-cart"></i> <span>Stock Inventory</span></a
+          >
+          <a href="#" class="nav-link"
+            ><i class="fa fa-users"></i> <span>Supplier Credit</span></a
+          >
+
+          <a href="./messages.html" class="nav-link"
+            ><i class="fa fa-comment-dots"></i> <span>Messages</span></a
+          >
+          <a href="./landingPage.html" class="nav-link"
+            ><i class="fa fa-right-from-bracket"></i> <span>Log out</span></a
+          >
+        </div>
+      </nav>
+      <div class="main-content">
+        <header class="topbar">
+          <h2>Stock Management</h2>
+          <div class="user-info">
+            <span class="badge"
+              >Stock Management <a href=""><i class="fa fa-circle-user"></i></a
+            ></span>
+          </div>
+        </header>
+         <form action="/manage-supplier-credit" method="POST">
+        <main class="main-container">
+            
+            <header class="navbar twoends">
+                <div><h2><i class="fa-solid fa-handshake"></i> Supplier Credit & Payables</h2></div>
+                <div class="debt-summary">
+                    <span>Total Owed:</span>
+                    <strong id="totalDebt">UGX 12,450,000</strong>
+                </div>
+            </header>
+
+            <section class="customerInfo">
+                <div class="headings">
+                    <h2><i class="fa-solid fa-file-invoice"></i> Record New Credit Purchase</h2>
+                </div>
+                <div class="customerBox">
+                    <div class="customerKid">
+                        <div class="customerkids">
+                            <label for="supplierName">Supplier Name</label>
+                            <input type="text" name="supplierName" id="supplierName" placeholder="e.g. Hima Cement Ltd" required />
+                        </div>
+                        <div class="customerkids">
+                            <label for="invoiceNumber">Invoice/GRN Number</label>
+                            <input type="text" name="invoiceNumber" id="invoiceNumber" placeholder="INV-00123" required />
+                        </div>
+                    </div>
+                    <div class="customerKids">
+                        <div class="customerkids">
+                            <label for="amountOwed">Credit Amount (UGX)</label>
+                            <input type="number" name="amountOwed" id="amountOwed" placeholder="0" required />
+                        </div>
+                        <div class="customerkids">
+                            <label for="dueDate">Due Date</label>
+                            <input type="date" name="dueDate" id="dueDate" required />
+                        </div>
+                        <div class="customerkids">
+                            <label>&nbsp;</label>
+                            <button type="submit" class="pdtbtn" title="Add Record">
+                                <i class="fa-solid fa-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="customerInfo overflow-hidden">
+                <div class="headings">
+                    <h2><i class="fa-solid fa-clock-rotate-left"></i> Outstanding Supplier Debts</h2>
+                </div>
+                <div class="customerBox">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Supplier</th>
+                                    <th>Invoice #</th>
+                                    <th>Date Taken</th>
+                                    <th>Due Date</th>
+                                    <th>Amount Owed</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Hima Cement Ltd</strong></td>
+                                    <td>#INV-992</td>
+                                    <td>10-04-2026</td>
+                                    <td>10-05-2026</td>
+                                    <td>UGX 4,500,000</td>
+                                    <td><span class="badge pending">Pending</span></td>
+                                    <td><button type="button" class="pay-btn">Settle</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Roofings Group</strong></td>
+                                    <td>#RF-4421</td>
+                                    <td>15-04-2026</td>
+                                    <td>20-04-2026</td>
+                                    <td>UGX 7,950,000</td>
+                                    <td><span class="badge overdue">Overdue</span></td>
+                                    <td><button type="button" class="pay-btn">Settle</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <div class="receipts">
+                <div class="cart">
+                    <h4>Overdue Debts</h4>
+                    <p style="color: #ef4444;">1</p>
+                </div>
+                <div class="cartTotal">
+                    <h4>Next Payment Due</h4>
+                    <p>10-05-2026</p>
+                </div>
+                <div class="status">
+                    <h4>Credit Health</h4>
+                    <p style="color: #16a34a;">Stable</p>
+                </div>
+            </div>
+
+        </main>
+    </form>
+      </div>
+    </div>
+  </body>
+</html>

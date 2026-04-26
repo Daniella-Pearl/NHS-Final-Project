@@ -1,0 +1,664 @@
+*, *::before, *::after{
+  margin:0;
+  padding:0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f0f2f5;
+  overflow-x: hidden;
+}
+.container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  /* position: relative; */
+  font-size:14px;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  width: 210px;
+  height: 100vh;
+  background: #764ba2;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+  border-right: 1px solid #e1e4e8;
+  z-index:100;
+  position:fixed;
+  transition: 0.3s;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.brand {
+  /* text-align: left; */
+  margin-bottom: 12px;
+  padding: 24px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.brand h1 {
+  /* margin: 10px 0; */
+  color: #fff;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "DM Serif Display";
+}
+.brand p {
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-top: 4px;
+  font-family: "IBM Plex Serif";
+}
+.logo {
+  width: 100px;
+  border-radius: 12px;
+  height:100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-menu-container{
+    flex:1;
+    padding: 0 12px;
+}
+.nav-link {
+  padding: 10px 12px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor:pointer;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #f8f9fa;
+  font-family: "Playfair Display";
+  font-weight: bold;
+  text-decoration: none;
+  transition: 
+    background 0.15s, color 0.15s;
+}
+
+.nav-link:hover {
+  background: rgba(242, 240, 243, 0.05);
+  color: black;
+}
+
+.btn-quick {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- MAIN CONTENT --- */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  width: 85%;
+  margin-left: 210px;
+}
+
+.topbar {
+  background: #764ba2;
+  padding: 22px 32px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e4e8;
+  box-shadow: var(--shadow-light);
+}
+
+.topbar h2 {
+  font-family: "Playfair Display", serif;
+  color: #e1e4e8;
+  font-size: 22px;
+  font-weight: 700;
+}
+.topbar span {
+  color: #e1e4e8;
+}
+.dashboard-body {
+  padding: 28px 32px;
+  flex:1;
+}
+
+/* --- STATS GRID (TOP 4) --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: #caa3f5;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 10px #764ba2;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 10px 12px #3b2353;
+}
+
+.stat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.stat-icon {
+  font-size: 1.2rem;
+  color: #0f0e0e;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+}
+.stat-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.stat-card h4 {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.stat-card .value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 5px 0;
+}
+.stat-card .trend {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Icon Colors */
+.icon-blue {
+  color: #2980b9;
+  background: #e3f2fd;
+}
+.icon-green {
+  color: #27ae60;
+  background: #e8f5e9;
+}
+.icon-orange {
+  color: #f39c12;
+  background: #fff3e0;
+}
+.icon-red {
+  color: #e74c3c;
+  background: #ffebee;
+}
+.critical {
+  color: orangered;
+}
+
+/* --- DASHBOARD GRIDS (BOTTOM) --- */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+  background: #caa3f5;
+  border-radius: 25px;
+}
+
+.content-box {
+  /* background: pink */
+  padding: 25px;
+  /* border-radius: 15px; */
+}
+
+.content-box h3 {
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: "DM Serif Display";
+}
+
+/* Charts */
+.content-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: 2fr 2fr;
+  gap: 20px;
+}
+.content-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  width: 80%;
+  margin: 20px;
+}
+
+.content-box h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #0f0e0e;
+  margin-bottom: 20px;
+}
+
+/* --- Sales Bar Chart --- */
+.chart-visual-container {
+  height: 180px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  flex: 1;
+  background: #764ba2;
+  height: var(--height);
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.bar:hover {
+  background: #caa3f5;
+}
+
+.bar::after {
+  content: attr(data-day);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: bolder;
+  color: #3e0707;
+  margin-bottom: 8px;
+}
+.sales-total {
+  padding-top: 30px;
+}
+
+/* --- Stock Status --- */
+.stock-visual-container {
+  margin-bottom: 20px;
+}
+
+.stock-item {
+  margin-bottom: 12px;
+}
+
+.stock-item .label {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.progress-bg {
+  background: #eee;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+}
+.progress-bar.success {
+  background: green;
+}
+.progress-bar.warning {
+  background: orange;
+}
+.progress-bar.danger {
+  background: red;
+}
+
+/* --- Tables & Pills --- */
+.status-table {
+  width: 100%;
+  font-size: 0.85rem;
+  border-collapse: collapse;
+}
+
+.status-table td {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pill {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.pill.success {
+  background: #d4edda;
+}
+.pill.danger {
+  background: #f8d7da;
+}
+.pill.warning {
+  background: #fff3cd;
+}
+
+/* Tables & Lists */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th {
+  text-align: left;
+  color: black;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+/* Status Pills */
+.pill {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.pill.warning {
+  background: #fff3e0;
+  color: #e67e22;
+}
+.pill.success {
+  background: #e8f5e9;
+  color: #2ecc71;
+}
+.pill.danger {
+  background: #ffebee;
+  color: #e74c3c;
+}
+
+/* Recent Activity */
+.timeline {
+  list-style: none;
+  margin-top: 30px;
+}
+.timeline-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid black;
+}
+.timeline-icon {
+  font-size: 1rem;
+  color: #764ba2;
+  margin-top: 3px;
+}
+.timeline-content p {
+  font-size: 0.9rem;
+}
+.timeline-content span {
+  font-size: 0.75rem;
+  color: #764ba2;
+}
+/* critical alerts */
+.critical {
+  border-left: 4px solid #e74c3c;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #fff5f5;
+  border-radius: 4px;
+}
+.pending {
+  border-left: 4px solid #f39c12;
+  padding: 10px;
+  background: #fffaf0;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.transit {
+  border-left: 4px solid #3b2353;
+  padding: 10px;
+  background: #dfc9f7;
+  border-radius: 4px;
+}
+
+/* QUICK ACTION BUTTONS (BOTTOM) */
+.action-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.btn-action {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.2s;
+}
+
+.btn-action:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.btn-green {
+  background: #27ae60;
+}
+.btn-blue {
+  background: #2980b9;
+}
+.btn-red {
+  background: #e74c3c;
+}
+
+/* sidebar small screen */
+@media screen and (max-width: 900px) {
+  /* 1. Stack sidebar on top of main content */
+  .container {
+    flex-direction: column;
+  }
+
+  /* 2. Adjust Sidebar into a top header */
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: none;
+    border-bottom: 1px solid #e1e4e8;
+  }
+
+  /* 3. Keep Brand at the very top, centered */
+  .brand {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .brand p,
+  .logo,
+  .btn-quick {
+    display: none; /* Hide clutter for mobile */
+  }
+
+  /* 4. Grid Arrangement: 3 Columns, 2 Rows */
+  /* Note: Ensure your links are wrapped in a container, 
+       if not, we target the sidebar itself excluding the brand */
+  .sidebar {
+    display: grid;
+    grid-template-columns: 1fr; /* Row for Brand */
+    gap: 15px;
+  }
+
+  /* Assuming your nav links are direct children or in a div */
+  /* We create a sub-grid for the links */
+  .nav-menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+    grid-template-rows: repeat(2, auto); /* 2 Rows */
+    gap: 10px;
+    width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+  }
+
+  .nav-link {
+    justify-content: center; /* Center icons/text in the box */
+    padding: 15px 5px;
+    margin: 0;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    flex-direction: column; /* Stack icon above text */
+    gap: 5px;
+    text-align: center;
+  }
+
+  /* 5. Main Content Adjustments */
+  .main-content {
+    width: 100%;
+  }
+
+  .topbar {
+    overflow-x: hidden;
+    display: none; /* Hide topbar to avoid double headers */
+  }
+
+  /* 6. Dashboard Grid Fixes */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .content-box {
+    width: auto;
+    margin: 10px 0;
+  }
+}
+/* dashboard small body */
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+  /* 1. Reset the Dashboard Body */
+  .dashboard-body {
+    padding: 15px; /* Reduced from 30px to save space */
+    width: 96%; /* Ensure it takes full width */
+    box-sizing: border-box; /* Crucial: includes padding in width calculation */
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+  }
+
+  /* 2. Fix the Stats Grid (Top 4 cards) */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 layout is best for tablets */
+    gap: 12px; /* Tighter gap */
+    margin-bottom: 20px;
+  }
+
+  .stat-card {
+    padding: 15px; /* Smaller padding inside cards */
+  }
+
+  .stat-card .value {
+    font-size: 1.2rem; /* Shrink text so it doesn't wrap awkwardly */
+  }
+
+  /* 3. Fix the Content Grid (Charts/Stock section) */
+  .content-grid {
+    grid-template-columns: 1fr; /* Stack elements vertically */
+    background: transparent; /* Remove purple background for a cleaner mobile look */
+    gap: 15px;
+    margin-bottom: 20px;
+    border-radius: 0; /* Optional: remove large radius on mobile */
+  }
+
+  /* 4. Reset Content Box restrictions */
+  .content-box {
+    width: 100% !important; /* Force full width */
+    /* margin: 0 !important; Remove the 20px side margins */
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 12px; /* Maintain rounded corners */
+  }
+
+  /* 5. Fine-tune for very small phones */
+  @media (max-width: 480px) {
+    .stats-grid {
+      grid-template-columns: 1fr; /* 1 column for phones */
+    }
+
+    .dashboard-body {
+      padding: 10px; /* Even tighter padding */
+    }
+  }
+}

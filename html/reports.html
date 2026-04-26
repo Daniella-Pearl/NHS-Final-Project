@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NyondoStock — Reports & Analytics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../public/css/reports.css" />
+  </head>
+  <body>
+    <!-- ═══════════ SIDEBAR ═══════════ -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo"><img src="../public/images/generated-1774986091754.png"></div>
+        <div>
+          <div class="brand-name">NyondoStock<br />System</div>
+          <div class="brand-sub">
+            Welcome back! Admin.<br />Track Business Progress.
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <a class="nav-item" href="#">
+          <!-- <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg> -->
+          <i class="fa fa-th-large"></i>Dashboard
+        </a>
+        <a class="nav-item" href="#">
+          <!-- <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="13" height="8" rx="1.5"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg> -->
+          <i class="fa fa-box"></i> Stock Management
+        </a>
+        <a class="nav-item" href="#">
+          <!-- <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8.5" cy="5" r="2.5"/><path d="M2 15c0-3.3 2.9-6 6.5-6s6.5 2.7 6.5 6"/><path d="M13 8l2 2 3-3" style="display:none"/></svg> -->
+          <i class="fa fa-shopping-cart"></i>Sales Management
+        </a>
+        <a class="nav-item" href="#">
+          <!-- <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 15V9m4 6V6m4 9V3m4 12V11"/></svg> -->
+          <i class="fa fa-users"></i> Customer Scheme
+        </a>
+        <a class="nav-item" href="#">
+          <!-- <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8.5" cy="6" r="3"/><path d="M2 16c0-3 3-5 6.5-5s6.5 2 6.5 5"/></svg> -->
+          <i class="fa fa-chart-line"></i>Reports
+        </a>
+        <a class="nav-item" href="#">
+          <!-- <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="13" height="10" rx="1.5"/><path d="M5 4V3m7 1V3"/></svg> -->
+          <i class="fa fa-comment-dots"></i>Messages
+        </a>
+        <a class="nav-item" href="#">
+          <!-- <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="2"/><path d="M8.5 2v1.5m0 9V14m4.6-9.1-1.1 1.1M4.5 11.5l-1 1M14 8.5h1.5m-14 0H3m9.6 4.6-1.1-1.1M4.5 5.5l-1-1"/></svg> -->
+          <i class="fa fa-user-shield"></i>User Management
+        </a>
+        <a class="nav-item" href="#">
+          <!-- <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 3H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h5"/><path d="M13 8H7m6 0-2.5-2.5M13 8l-2.5 2.5"/></svg> -->
+          <i class="fa fa-right-from-bracket"></i> Logout
+        </a>
+      </nav>
+    </aside>
+
+    <!-- ═══════════ MAIN ═══════════ -->
+    <main class="main">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="topbar-title">
+          <h1>Reports &amp; Analytics</h1>
+          <p>Comprehensive insights into your business performance.</p>
+        </div>
+        <div class="topbar-actions">
+          <div class="topbar-user">
+            Admin Account &nbsp;
+            <i
+              class="fa-regular fa-circle-user"
+              style="color: rgb(246, 243, 243); width: 60px"
+            ></i>
+          </div>
+          <div class="date-picker">
+            <svg
+              width="14"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <rect x="1" y="2" width="12" height="11" rx="1.5" />
+              <path d="M4 1v2m6-2v2M1 6h12" />
+            </svg>
+            Apr 15, 2026 – Apr 21, 2026
+            <i
+              class="fa-regular fa-circle-user"
+              style="color: rgb(246, 243, 243)"
+            ></i>
+          </div>
+          <button class="btn-export">
+            <svg
+              width="14"
+              height="14"
+              fill="black"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M7 2v8m0 0-3-3m3 3 3-3" />
+              <path d="M2 12h10" />
+            </svg>
+            Export Report
+          </button>
+        </div>
+      </header>
+
+      <!-- CONTENT -->
+      <div class="content">
+        <!-- STAT CARDS -->
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <span class="stat-label">Total Sales</span>
+              <div class="stat-icon"><i class="fa fa-coins stat-icon"></i></div>
+            </div>
+            <div class="stat-value">250,000 UGX</div>
+            <div class="stat-change up">↑ 10% from last week</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <span class="stat-label">Total Orders</span>
+              <div class="stat-icon">
+                <i class="fa fa-warehouse stat-icon"></i>
+              </div>
+            </div>
+            <div class="stat-value">125</div>
+            <div class="stat-change up">↑ 8% from last week</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <span class="stat-label">Active Customers</span>
+              <div class="stat-icon">
+                <i class="fa fa-user-check stat-icon"></i>
+              </div>
+            </div>
+            <div class="stat-value">45</div>
+            <div class="stat-change up">↑ 12% from last week</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-top">
+              <span class="stat-label">Low Stock Items</span>
+              <div class="stat-icon">
+                <i class="fa fa-warning" style="color: red"></i>
+              </div>
+            </div>
+            <div class="stat-value">5</div>
+            <div class="stat-change warn">Critical stock alert</div>
+          </div>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="filters">
+          <select class="filter-select">
+            <option>All Categories</option>
+            <option>Cement</option>
+            <option>Iron Sheets</option>
+            <option>Paint</option>
+            <option>Nails</option>
+            <option>Sand</option>
+          </select>
+          <select class="filter-select">
+            <option>All Locations</option>
+            <option>Mukono</option>
+            <option>Bukerere</option>
+            <option>Kampala</option>
+          </select>
+          <select class="filter-select">
+            <option>All Payment Methods</option>
+            <option>Cash</option>
+            <option>Mobile Money</option>
+            <option>Credit</option>
+          </select>
+          <button type="submit" class="btn-apply">
+            <svg
+              width="13"
+              height="13"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M1 3h11M3 7h7M5 11h3" />
+            </svg>
+            Apply Filters
+          </button>
+          <button type="reset" class="btn-reset">
+            <i
+              class="fa-solid fa-arrow-rotate-left"
+              style="color: rgb(241, 239, 239)"
+            ></i>
+            Reset
+          </button>
+        </div>
+
+        <!-- CHARTS ROW -->
+        <div class="charts-row">
+          <!-- Sales Trend -->
+          <div class="chart-card">
+            <div class="chart-card-title">
+              <svg
+                width="15"
+                height="15"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M1 12l4-5 3 3 4-7 3 3" />
+              </svg>
+              Sales Trend
+            </div>
+            <div class="bar-chart">
+              <div style="position: relative; padding-left: 38px">
+                <div class="y-labels">
+                  <span>300K</span><span>250K</span><span>200K</span>
+                  <span>150K</span><span>100K</span><span>50K</span
+                  ><span>0</span>
+                </div>
+                <div class="bar-chart-grid" id="barGrid"></div>
+              </div>
+              <div
+                class="bar-dates"
+                style="padding-left: 38px"
+                id="barDates"
+              ></div>
+            </div>
+            <div class="chart-total">
+              Total Sales: <strong>250,000 UGX</strong>
+            </div>
+          </div>
+
+          <!-- Top Selling Products (Pie) -->
+          <div class="chart-card">
+            <div class="chart-card-title">
+              <svg
+                width="15"
+                height="15"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="7.5" cy="7.5" r="6" />
+                <path d="M7.5 7.5V2" />
+                <path d="M7.5 7.5l4.2 4.2" />
+              </svg>
+              Top Selling Products
+            </div>
+            <div class="pie-wrap">
+              <svg class="pie-svg" viewBox="0 0 42 42" id="pieSvg"></svg>
+              <div class="pie-legend" id="pieLegend"></div>
+            </div>
+          </div>
+
+          <!-- Stock Alerts -->
+          <div class="chart-card">
+            <div class="chart-card-title">
+              <svg
+                width="15"
+                height="15"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7.5 2l6.5 12H1z" />
+                <path d="M7.5 7v3m0 2.5v.5" />
+              </svg>
+              Stock Alerts
+            </div>
+            <div class="alerts-list">
+              <div class="alert-row">
+                <div class="alert-info">
+                  <span class="alert-name">Cement</span>
+                  <span class="alert-qty">5 items left</span>
+                </div>
+                <span class="badge critical">Critical</span>
+              </div>
+              <div class="alert-row">
+                <div class="alert-info">
+                  <span class="alert-name">Iron Sheets</span>
+                  <span class="alert-qty">8 items left</span>
+                </div>
+                <span class="badge low">Low</span>
+              </div>
+              <div class="alert-row">
+                <div class="alert-info">
+                  <span class="alert-name">Paint</span>
+                  <span class="alert-qty">12 items left</span>
+                </div>
+                <span class="badge low">Low</span>
+              </div>
+              <div class="alert-row">
+                <div class="alert-info">
+                  <span class="alert-name">Nails</span>
+                  <span class="alert-qty">15 items left</span>
+                </div>
+                <span class="badge good">Good</span>
+              </div>
+              <div class="alert-row">
+                <div class="alert-info">
+                  <span class="alert-name">Sand</span>
+                  <span class="alert-qty">30 items left</span>
+                </div>
+                <span class="badge good">Good</span>
+              </div>
+            </div>
+            <a href="#" class="view-link" style="margin-top: 14px"></a>
+          </div>
+        </div>
+
+        <!-- RECENT REPORTS TABLE -->
+        <div class="section-title">Recent Reports</div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Report Name</th>
+                <th>Type</th>
+                <th>Date Generated</th>
+                <th>Generated By</th>
+                <th>File Size</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sales Summary Report</td>
+                <td><span class="type-badge">Sales</span></td>
+                <td>Apr 21, 2026 10:30 AM</td>
+                <td>Admin</td>
+                <td>245 KB</td>
+                <td>
+                  <div class="action-btns">
+                    <button class="btn-icon btn-dl">⬇</button
+                    ><button class="btn-icon btn-view">👁</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Stock Status Report</td>
+                <td><span class="type-badge stock">Stock</span></td>
+                <td>Apr 21, 2026 09:15 AM</td>
+                <td>Admin</td>
+                <td>189 KB</td>
+                <td>
+                  <div class="action-btns">
+                    <button class="btn-icon btn-dl">⬇</button
+                    ><button class="btn-icon btn-view">👁</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Customer Analysis Report</td>
+                <td><span class="type-badge customer">Customers</span></td>
+                <td>Apr 20, 2026 04:45 PM</td>
+                <td>Admin</td>
+                <td>312 KB</td>
+                <td>
+                  <div class="action-btns">
+                    <button class="btn-icon btn-dl">⬇</button
+                    ><button class="btn-icon btn-view">👁</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Revenue Report</td>
+                <td><span class="type-badge finance">Finance</span></td>
+                <td>Apr 20, 2026 02:20 PM</td>
+                <td>Admin</td>
+                <td>156 KB</td>
+                <td>
+                  <div class="action-btns">
+                    <button class="btn-icon btn-dl">⬇</button
+                    ><button class="btn-icon btn-view">👁</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Inventory Movement Report</td>
+                <td><span class="type-badge stock">Stock</span></td>
+                <td>Apr 20, 2026 11:30 AM</td>
+                <td>Admin</td>
+                <td>278 KB</td>
+                <td>
+                  <div class="action-btns">
+                    <button class="btn-icon btn-dl">⬇</button
+                    ><button class="btn-icon btn-view">👁</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table-footer">
+            <a href="#" class="view-link">View all reports →</a>
+          </div>
+        </div>
+      </div>
+      <!-- /content -->
+    </main>
+
+    <script>
+      // ── BAR CHART ──
+      const barData = [
+        { day: "Apr 15", val: 90000 },
+        { day: "Apr 16", val: 140000 },
+        { day: "Apr 17", val: 165000 },
+        { day: "Apr 18", val: 195000 },
+        { day: "Apr 19", val: 110000 },
+        { day: "Apr 20", val: 255000 },
+        { day: "Apr 21", val: 270000 },
+      ];
+      const maxVal = 300000;
+      const grid = document.getElementById("barGrid");
+      const datesRow = document.getElementById("barDates");
+
+      barData.forEach((d) => {
+        const wrap = document.createElement("div");
+        wrap.className = "bar-wrap";
+        const bar = document.createElement("div");
+        bar.className = "bar";
+        bar.style.height = (d.val / maxVal) * 136 + "px";
+        bar.title = d.day + ": " + d.val / 1000 + "K UGX";
+        wrap.appendChild(bar);
+        grid.appendChild(wrap);
+      });
+
+      barData.forEach((d) => {
+        const sp = document.createElement("span");
+        sp.textContent = d.day.replace("Apr ", "");
+        datesRow.appendChild(sp);
+      });
+
+      // ── PIE CHART ──
+      const segments = [
+        { label: "Cement", pct: 48, color: "#5b4fcf", val: "120,000 UGX" },
+        { label: "Iron Sheets", pct: 32, color: "#22c55e", val: "80,000 UGX" },
+        { label: "Paint", pct: 12, color: "#f59e0b", val: "30,000 UGX" },
+        { label: "Others", pct: 8, color: "#3b82f6", val: "20,000 UGX" },
+      ];
+
+      const cx = 21,
+        cy = 21,
+        r = 15.9,
+        circ = 2 * Math.PI * r;
+      let offset = 0;
+      const svg = document.getElementById("pieSvg");
+
+      // draw circle segments as stroke-dasharray slices
+      segments.forEach((s) => {
+        const dash = (s.pct / 100) * circ;
+        const circle = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "circle",
+        );
+        circle.setAttribute("cx", cx);
+        circle.setAttribute("cy", cy);
+        circle.setAttribute("r", r);
+        circle.setAttribute("fill", "none");
+        circle.setAttribute("stroke", s.color);
+        circle.setAttribute("stroke-width", "8");
+        circle.setAttribute("stroke-dasharray", `${dash} ${circ - dash}`);
+        circle.setAttribute("stroke-dashoffset", -offset);
+        circle.setAttribute("transform", `rotate(-90 ${cx} ${cy})`);
+        svg.appendChild(circle);
+        offset += dash;
+      });
+
+      const legend = document.getElementById("pieLegend");
+      segments.forEach((s) => {
+        const item = document.createElement("div");
+        item.className = "legend-item";
+        item.innerHTML = `
+    <div class="legend-label">
+      <div class="legend-dot" style="background:${s.color}"></div>
+      ${s.label}
+    </div>
+    <span class="legend-val">${s.val} (${s.pct}%)</span>`;
+        legend.appendChild(item);
+      });
+    </script>
+  </body>
+</html>

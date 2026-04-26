@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* login page */
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+.sidebar {
+  width: 30%;
+  /* height: 100vh; */
+  background: #764ba2;
+}
+.main {
+  /* margin-top: 5%; */
+  /* height: 100vh; */
+  width: 70%;
+  background-color: #f8f9fa;
+}
+.brand {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.logo {
+  width: 100px;
+  margin-top: 40%;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+.login_form {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand h1 {
+  margin: 10px 0;
+  color: #fff;
+  font-weight: bolder;
+  font-family: "DM Serif Display";
+}
+.brand p {
+  color: #e6e4e4;
+  font-family: "Prata";
+  font-family: "IBM Plex Serif";
+}
+.login_form h2 {
+  margin: 15% 0;
+  text-align: center;
+  font-family: "Playfair Display";
+  text-transform: uppercase;
+}
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.password {
+  position: relative;
+}
+.password i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+/* Subtle hover effect for the icon */
+.password-wrapper i:hover {
+  color: #333;
+}
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #764ba2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #442e5c;
+}
+
+.forgot-link {
+  font-size: 14px;
+  color: #764ba2;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+/* responsive login page */
+/* 📱 Small screen */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column; /* stack items */
+  }
+
+  .sidebar {
+    width: 100%;
+    order: -1; /* 👈 moves sidebar to top */
+  }
+  .main {
+    width: 100%;
+  }
+  .logo {
+    width: 100px;
+    margin-top: 10%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  .brand {
+    margin-bottom: 10px;
+  }
+  .login_form {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .login_form h2 {
+    margin: 5% 0;
+    text-align: center;
+    font-family: "Playfair Display";
+    text-transform: uppercase;
+  }
+}

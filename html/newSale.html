@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NyondoStock | Sales Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Source+Sans+3:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../public/css/login.css" />
+    <link rel="stylesheet" href="../public/css/dashboard.css" />
+    <link rel="stylesheet" href="../public/css/newSale.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="brand">
+          <img
+            src="../public/images/generated-1774986091754.png"
+            alt="NyondoStock"
+            class="logo"
+          />
+          <h1>NyondoStock System</h1>
+          <p>Sales Management</p>
+        </div>
+        <div class="nav-menu-container">
+          <a href="#" class="nav-link"
+            ><i class="fa fa-th-large"></i><span>Dashboard</span></a
+          >
+          <a href="./sales.html" class="nav-link"
+            ><i class="fa fa-shopping-cart"></i>
+            <span>Sales Registration</span></a
+          >
+          <a href="./customerscheme.html" class="nav-link"
+            ><i class="fa fa-users"></i> <span>Customer Scheme</span></a
+          >
+
+          <a href="./messages.html" class="nav-link"
+            ><i class="fa fa-comment-dots"></i> <span>Messages</span></a
+          >
+          <a href="./landingPage.html" class="nav-link"
+            ><i class="fa fa-right-from-bracket"></i> <span>Log out</span></a
+          >
+        </div>
+      </nav>
+
+      <div class="main-content">
+        <header class="topbar">
+          <h2>🛒 Welcome back to New Sales Registration</h2>
+          <div class="user-info">
+            <span id="date" style="color: white"
+              ><i class="fa-regular fa-calendar-days" style="color: white"></i>
+              24-04-2026</span
+            >
+          </div>
+        </header>
+
+        <form action="/register-sale" method="POST" id="salesForm">
+          <main class="main-container">
+            <section class="customerInfo">
+              <div class="headings">
+                <h2><i class="fa-solid fa-user"></i> Customer Details</h2>
+              </div>
+              <div class="customerBox">
+                <div class="customerKid">
+                  <div class="customerkids">
+                    <label for="customername">Customer Name</label>
+                    <input
+                      type="search"
+                      name="customerName"
+                      id="customername"
+                      placeholder="Search Customer..."
+                      required
+                    />
+                  </div>
+                  <div class="customerkids">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input
+                      type="tel"
+                      name="phoneNumber"
+                      id="phoneNumber"
+                      placeholder="0740898912"
+                    />
+                  </div>
+                </div>
+                <div class="balance px-20">
+                  <label class="radio-container">
+                    <input
+                      type="radio"
+                      name="customerType"
+                      value="walk-in"
+                    />
+                    Walk-In Customer
+                  </label>
+                </div>
+              </div>
+            </section>
+
+            <section class="customerInfo">
+              <div class="headings">
+                <h2><i class="fa-solid fa-box-open"></i> Add Product</h2>
+              </div>
+              <div class="customerBox">
+                <div class="customerKids">
+                  <div class="customerkids">
+                    <label>Product</label>
+                    <input
+                      type="search"
+                      name="productName"
+                      id="tempProductName"
+                      placeholder="🔍 Search Product"
+                    />
+                  </div>
+                  <div class="customerkids">
+                    <label>Qty</label>
+                    <input type="number" name="productqty" id="tempQuantity" placeholder="0" />
+                  </div>
+                  <div class="customerkids">
+                    <label>Price</label>
+                    <input
+                      type="text"
+                      id="tempPrice"
+                      name="price"
+                      placeholder="Auto"
+                      readonly
+                    />
+                  </div>
+                  <div class="customerkids">
+                    <button type="button" class="pdtbtn" onclick="addRow()">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="customerInfo overflow-hidden">
+              <div class="headings">
+                <h2><i class="fa-solid fa-cart-shopping"></i> Cart Items</h2>
+              </div>
+              <div class="customerBox">
+                <div class="table-responsive">
+                  <table id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+                <div class="customerkids2">
+                  <label for="total">Total In Cart:</label>
+                  <input
+                    type="text"
+                    name="totalInCart"
+                    id="total"
+                    value="0 UGX"
+                    readonly
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section class="customerInfo">
+              <div class="headings">
+                <h2>
+                  <i class="fa-regular fa-credit-card"></i> Payment & Delivery
+                </h2>
+              </div>
+              <div class="customerBox">
+                <div class="transport px-20">
+                  <h3>
+                    <i class="fa-solid fa-truck"></i> Delivery Information
+                  </h3>
+                  <div class="customerKid">
+                    <div class="customerkids">
+                      <label for="distance">Distance (km)</label>
+                      <input
+                        type="number"
+                        name="distance"
+                        id="distance"
+                        placeholder="0"
+                      />
+                    </div>
+                    <div class="customerkids">
+                      <label for="deliveryfee">Delivery Fee</label>
+                      <input
+                        type="text"
+                        name="deliveryFee"
+                        id="deliveryfee"
+                        placeholder="0"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="balance">
+                  <h3>Payment Calculations</h3>
+                  <div class="balances">
+                    <div class="customerkids">
+                      <label for="amountpaid">Amount Paid (UGX)</label>
+                      <input
+                        type="number"
+                        name="amountPaid"
+                        id="amountpaid"
+                        placeholder="Enter Amount"
+                        required
+                      />
+                    </div>
+                    <div class="balancing">
+                      <h4>Balance:</h4>
+                      <span class="secondEnd" id="balanceDisplay">0 UGX</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="balance">
+                  <h3 id="heading3">Payment Type</h3>
+                  <div class="type">
+                    <label
+                      ><input
+                        type="radio"
+                        name="paymentType"
+                        value="cash"
+                        checked
+                      />
+                      💷 Cash</label
+                    >
+                  </div>
+                  <div class="type">
+                    <label
+                      ><input type="radio" name="paymentType" value="credit" />
+                      📝 Credit</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="action-footer">
+              <div class="receipts">
+                <button type="submit" class="complete">
+                  <i class="fa-solid fa-check"></i> Complete Sale
+                </button>
+
+                <button type="button" class="print" onclick="window.print()">
+                  <i class="fa-solid fa-print"></i> Print Receipt
+                </button>
+
+                <button type="reset" class="cancel">
+                  <i class="fa-solid fa-xmark"></i> Cancel
+                </button>
+
+              </div>
+            </div>
+          </main>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

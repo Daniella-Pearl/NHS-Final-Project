@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NyondoStock:Sales Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../public/css/dashboard.css" />
+    <link rel="stylesheet" href="../public/css/stockmgt.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="brand">
+          <img
+            src="../public/images/generated-1774986091754.png"
+            alt="NyondoStock"
+            class="logo"
+          />
+          <h1>NyondoStock System</h1>
+          <p>Sales Management</p>
+        </div>
+        <div class="nav-menu-container">
+          <a href="#" class="nav-link"
+            ><i class="fa fa-th-large"></i><span>Dashboard</span></a
+          >
+          <a href="./sales.html" class="nav-link"
+            ><i class="fa fa-shopping-cart"></i>
+            <span>Sales Registration</span></a
+          >
+          <a href="./customerscheme.html" class="nav-link"
+            ><i class="fa fa-users"></i> <span>Customer Scheme</span></a
+          >
+          
+          <a href="./messages.html" class="nav-link"
+            ><i class="fa fa-comment-dots"></i> <span>Messages</span></a
+          >
+          <a href="./landingPage.html" class="nav-link"
+            ><i class="fa fa-right-from-bracket"></i> <span>Log out</span></a
+          >
+        </div>
+      </nav>
+      <div class="main-content">
+        <header class="topbar">
+          <h2>Sales Management</h2>
+          <div class="user-info">
+            <span class="badge"
+              >Sales Management <a href=""><i class="fa fa-circle-user"></i
+            ></a></span>
+          </div>
+        </header>
+        <div class="action-row">
+          
+          <button type="submit" class="btn-action btn-green">View Inventory</button>
+          
+        </div>
+         <section class="stats-row">
+        <div class="stat-card">
+          <span class="stat-label">Total Inventory Value</span>
+          <span class="stat-value">UGX 4,250,000</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Total Owed (Credit)</span>
+          <span class="stat-value" style="color: #dc3545">UGX 250,000</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Low Stock Items</span>
+          <span class="stat-value" style="color: #ff9800">12</span>
+        </div>
+      </section>
+      <section class="content-card" id="supplier-credit-view">
+        <div class="card-header">
+          <h2>
+            <i class="fa-solid fa-hand-holding-dollar"></i> Supplier Credit
+            Ledger
+          </h2>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Supplier Name</th>
+                <th>Total Amount Owed</th>
+                <th>Amount Paid</th>
+                <th>Balance Due</th>
+                <th>Payment Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>John Ltd</strong></td>
+                <td>200,000</td>
+                <td>50,000</td>
+                <td><strong style="color: #dc3545">150,000</strong></td>
+                <td><span>Partially Paid</span></td>
+                <td><button type="submit" class="btn-action btn-green">Make Payment</button></td>
+              </tr>
+              <tr>
+                <td><strong>Kate Co</strong></td>
+                <td>100,000</td>
+                <td>0</td>
+                <td><strong style="color: #dc3545">100,000</strong></td>
+                <td><span class="status out-of-stock">Unpaid</span></td>
+                <td><button type="submit" class="btn-action btn-green">Make Payment</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="content-card">
+        <div class="card-header">
+          <h2>Stock Inventory</h2>
+        </div>
+        <div class="table-responsive">
+            <div class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Unit Cost</th>
+                <th>Supplier Name</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sugar</strong></td>
+                <td>50</td>
+                <td>3,000</td>
+                <td>John Ltd</td>
+                <td><span class="status in-stock">In Stock</span></td>
+                <td>
+                  <button class="action-btn edit btn">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="action-btn delete btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </section>
+      <section class="content-card">
+        <div class="card-header">
+          <h2 id="stform">Add / Update Stock</h2>
+        </div>
+        <form class="stock-form" action="" method="">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" placeholder="e.g. Cement" />
+            </div>
+            <div class="form-group">
+              <label>Date</label>
+              <input type="date" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Quantity</label>
+              <input type="number" placeholder="0" />
+            </div>
+            <div class="form-group">
+              <label>Supplier Name</label>
+              <select>
+                <option>Select Supplier</option>
+                <option>John Ltd</option>
+                <option>Kate Co</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Unit Cost</label>
+              <input type="number" placeholder="0.00" />
+            </div>
+            <div class="form-group">
+              <label>Transportation Cost</label>
+              <input type="text" placeholder="Auto" />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-add">Save Stock</button>
+            <button type="button" class="btn btn-update">Update Stock</button>
+          </div>
+        </form>
+      </section>
+      </div>
+    </div>
+  </body>
+</html>

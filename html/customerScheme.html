@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NyondoStock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../public/css/dashboard.css" />
+    <link rel="stylesheet" href="../public/css/customer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <div class="brand">
+          <img
+            src="../public/images/generated-1774986091754.png"
+            alt="NyondoStock"
+            class="logo"
+          />
+          <h1>NyondoStock System</h1>
+          <p>Customer Management Form</p>
+        </div>
+        <div class="nav-menu-container">
+          <a href="./salesdashboard.html" class="nav-link"
+            ><i class="fa fa-th-large"></i><span>Dashboard</span></a
+          >
+          <a href="./newCustomer.html" class="nav-link"
+            ><i class="fa fa-users"></i> <span>New Customer</span></a
+          >
+          <a href="#" class="nav-link"
+            ><i class="fa fa-users"></i> <span>Customer List </span></a
+          >
+          <a href="#" class="nav-link"
+            ><i class="fa fa-comment-dots"></i> <span>Messages</span></a
+          >
+          <a href="./salesdashboard.html" class="nav-link"
+            ><i class="fa fa-right-from-bracket"></i> <span>Log out</span></a
+          >
+        </div>
+      </nav>
+
+      <div class="main-content">
+        <header class="topbar">
+          <h2>Customer Scheme</h2>
+          <div class="user-info">
+            <span class="badge"
+              >Sales Attendant Account <i class="fa fa-circle-user"></i
+            ></span>
+          </div>
+        </header>
+
+        <div class="dashboard-body">
+          <main class="container3">
+            <section id="profile" class="card">
+              <h2>Account Overview</h2>
+              <div class="profilelook">
+                <div class="profilelook_initials">JD</div>
+                <div>
+                  <h3>John Doe</h3>
+                  <p style="color: #666; font-size: 0.9rem">
+                    ID: NY-8829 | Kampala, Uganda
+                  </p>
+                  <span class="badge_profilelook">Active Member</span>
+                </div>
+              </div>
+              <div class="stats">
+                <div class="stat-box">
+                  <small>Balance</small>
+                  <p style="font-size: 1.2rem; font-weight: bold; color: red">
+                    $1,200
+                  </p>
+                </div>
+                <div class="stat-box">
+                  <small>Credit Limit</small>
+                  <p
+                    style="font-size: 1.2rem; font-weight: bold; color: orange"
+                  >
+                    $5,000
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="credit-status" class="card">
+              <h2>Credit Status</h2>
+              <div class="credit-overview">
+                <div class="status-header">
+                  <span>Total Credit Limit: <strong>$5,000</strong></span>
+                  <span
+                    >Available:
+                    <strong style="color: #28a745">$3,800</strong></span
+                  >
+                </div>
+
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 24%"></div>
+                </div>
+
+                <div class="status-footer">
+                  <p>
+                    You have used <strong>$1,200</strong> (24%) of your credit
+                    limit.
+                  </p>
+                  <p class="due-date">
+                    Next Payment Due: <strong>May 15, 2026</strong>
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="history" class="card">
+              <h2>Transaction History</h2>
+              <div class="table-responsive">
+                <table class="transaction-table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Description</th>
+                      <th>Type</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10 Apr 2026</td>
+                      <td>Deposit via Mobile Money</td>
+                      <td><span class="type-credit">Credit</span></td>
+                      <td>+$500.00</td>
+                      <td><span class="badge success">Completed</span></td>
+                    </tr>
+                    <tr>
+                      <td>08 Apr 2026</td>
+                      <td>Cement Purchase (20 Bags)</td>
+                      <td><span class="type-debit">Debit</span></td>
+                      <td>-$350.00</td>
+                      <td><span class="badge success">Completed</span></td>
+                    </tr>
+                    <tr>
+                      <td>05 Apr 2026</td>
+                      <td>Iron Bars Collection</td>
+                      <td><span class="type-debit">Debit</span></td>
+                      <td>-$850.00</td>
+                      <td><span class="badge success">Completed</span></td>
+                    </tr>
+                    <tr>
+                      <td>01 Apr 2026</td>
+                      <td>Point Redemption</td>
+                      <td><span class="type-credit">Credit</span></td>
+                      <td>+$45.00</td>
+                      <td><span class="badge warning">Pending</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section id="deposit" class="card">
+              <h2>Make a Deposit</h2>
+              <form>
+                <label>Amount to Deposit</label>
+                <input type="number" placeholder="0.00" />
+                <select>
+                  <option>Mobile Money (MTN/Airtel)</option>
+                  <option>Bank Transfer</option>
+                  <option>Credit Card</option>
+                </select>
+                <button type="submit" class="btn-action btn-green">
+                  Confirm Payment
+                </button>
+              </form>
+            </section>
+            <section id="collection" class="card">
+              <h2>Goods Collection</h2>
+              <p>Enter Order ID to collect your stock.</p>
+              <div class="action-box">
+                <input type="text" placeholder="Enter Order ID" />
+                <button type="submit" class="btn-action btn-blue">
+                  Verify Order
+                </button>
+              </div>
+              <ul class="item-list">
+                <li><span>Cement (50 Bags)</span> <strong>Pending</strong></li>
+                <li>
+                  <span>Iron Bars (20 units)</span> <strong>Ready</strong>
+                </li>
+              </ul>
+            </section>
+
+            <section id="redemption" class="card">
+              <h2>Point Redemption</h2>
+              <p>Exchange your loyalty points for stock credit.</p>
+              <div class="points-display">
+                <h3>Available Points: 4,500</h3>
+                <small>Value: $45.00</small>
+              </div>
+              <button type="submit" class="btn-action btn-green">
+                Redeem Points Now
+              </button>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,344 @@
+.roles li a{
+  text-decoration: none;
+  background: transparent;
+  color: white;
+}
+.roles li{
+  list-style: georgian;
+}
+.role{
+  margin-bottom: 10px;
+}
+.role:hover{
+  background: #7c3aed;
+  padding: 1px;
+  border-radius: 20px;
+  border: 1px solid #3b2353;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.messaging-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 1. Chat List Pane */
+.chat-sidebar {
+  width: 320px;
+  background: white;
+  border-right: 1px solid #764ba2;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-container {
+  padding: 25px 20px 15px;
+}
+.search-input-wrapper {
+  background: #f1f3f7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #764ba2;
+  padding: 1px 15px;
+  gap: 10px;
+}
+.search-input-wrapper input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  color: black;
+  font-family: "Playfair Display";
+}
+.search-input-wrapper i {
+  color: black;
+}
+
+.role-selector {
+  padding: 0 20px 15px;
+  font-size: 14px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.contact-list {
+  overflow-y: auto;
+  flex: 1;
+}
+.contact {
+  padding: 15px 20px;
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #f8f8f8;
+  cursor: pointer;
+  position: relative;
+}
+.contact:hover {
+  background: #dabdf7;
+}
+.contact.active {
+  background: #dabdf7;
+}
+
+.avatar-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #764ba2;
+  flex-shrink: 0;
+}
+.contact-info {
+  flex: 1;
+  min-width: 0;
+}
+.contact-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+.contact-name {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "DM Serif Display";
+  color: #000;
+}
+.contact-time {
+  font-size: 11px;
+  color: rgb(24, 24, 24);
+  font-family: "DM Serif Display";
+}
+.contact-role {
+  font-size: 12px;
+  color: #402d53;
+  margin-bottom: 4px;
+}
+.contact-preview {
+  font-size: 13px;
+  color: #757474;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.badge {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  background: #764ba2;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+/* 2. Main Chat Conversation Pane */
+.chat-pane {
+  flex: 1;
+  background: #c2a5ed;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #764ba2;
+}
+.chat-pane-header {
+  padding: 15px 25px;
+  border-bottom: 1px solid #764ba2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-avatar {
+  width: 40px;
+  height: 40px;
+  background: #764ba2;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.chat-pane-header strong {
+  font-size: 15px;
+  font-family: "DM Serif Display";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.chat-pane-header p {
+  font-size: 12px;
+  color: black;
+}
+.chat-pane-header p span{
+  color:green;
+  font-weight: 600;
+}
+.messages-container {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.bubble {
+  max-width: 75%;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.received {
+  background: #764ba2;
+  color:#f1f3f7;
+  font-family: 'BM Plex Serif';
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+.sent {
+  background: #4d3565;
+  color:white;
+  font-family: 'Prata';
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+.timestamp {
+  display: block;
+  font-weight: bolder;
+  font-size: 10px;
+  color: #999;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.message-input-bar {
+  padding: 5px 25px;
+  border-top: 1px solid #3b2353;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.message-input-bar input {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #eee;
+  outline: none;
+  background: #fafafa;
+}
+.message-input-bar i {
+  font-size: 22px;
+  color: #f0f2f5;
+  cursor: pointer;
+}
+/* 3. Rights Roles Pane */
+.roles-pane {
+  width: 280px;
+  padding: 25px;
+  background: #c2a5ed6c;
+}
+.roles-card {
+  background: #b08ed3ea;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+.roles-card h3 {
+  font-size: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-blue);
+}
+.role-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.admin {
+  background: #3b82f6;
+}
+.manager {
+  background: #506680;
+}
+.cashier {
+  background: #f59e0b;
+}
+.sales {
+  background: #7c3aed;
+}
+
+/* responsive messages page */
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* For Tablets and small laptops */
+@media screen and (max-width: 1024px) {
+    .roles-pane {
+        display: none; /* Hide the third column to give chat more room */
+    }
+}
+
+/* For Mobile Phones */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Safety lock against x-axis overflow */
+    }
+
+    .messaging-layout {
+        flex-direction: column; /* Stack the list on top of the chat */
+        overflow-y: auto;
+    }
+
+    .chat-sidebar {
+        width: 100%; /* Take full width */
+        min-width: 100%;
+        height: 350px; /* Limit height so chat is visible below */
+        border-right: none;
+        border-bottom: 2px solid #764ba2;
+    }
+
+    .chat-pane {
+        width: 100%;
+        min-width: 100%;
+        height: 500px; /* Ensure chat has its own scroll space */
+    }
+
+    .bubble {
+        max-width: 85%; /* Allow bubbles to be wider on small screens */
+    }
+
+    .message-input-bar {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .message-input-bar input {
+        padding: 10px 15px; /* Slightly smaller padding */
+    }
+
+    .contact-time {
+        font-size: 10px; /* Prevent text overlap */
+    }
+}
+
+/* For Extra Small Screens (Portrait Phones) */
+@media screen and (max-width: 480px) {
+    .chat-sidebar {
+        height: 250px; /* Smaller list area */
+    }
+    
+    .chat-pane-header strong {
+        font-size: 13px;
+    }
+    
+    .search-container {
+        padding: 15px 10px;
+    }
+}

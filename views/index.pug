@@ -1,0 +1,38 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title NYONDOSTOCK
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')
+  link(rel='stylesheet' href='/css/index.css')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+section.header
+  nav
+    a(href='index')
+      img(src='/images/generated-1774986091754.png')
+    #navLinks.nav-links
+      i.fa.fa-times(onclick='hideMenu()')
+      ul
+        li.hero-btn
+          a(href='')
+            i.fa-solid.fa-comment-sms(style='color: rgb(246, 243, 243)')
+        li.hero-btn
+          a(href='')
+            i.fa-solid.fa-envelope(style='color: rgb(246, 243, 243)')
+        li.hero-btn
+          a(href='')
+            i.fa-brands.fa-whatsapp(style='color: rgb(246, 243, 243)')
+        li.hero-btn
+          a(href='')
+            i.fa-solid.fa-phone(style='color: rgb(246, 243, 243)')
+    i.fa.fa-bars(onclick='showMenu()')
+  .text-box
+    h1 NYONDO STOCK HARDWARE
+    p
+      | Build with confidence at NyondoStock&mdash;your trusted hardware hub in
+      | Uganda. From nails and paint to cement and iron bars, we provide
+      | quality materials at fair prices to power your progress.
+    a.hero-btn-1(href='/login') LOGIN
+script(src='https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js')
