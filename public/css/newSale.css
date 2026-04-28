@@ -101,6 +101,7 @@
   font-weight: bolder;
   padding: 10px;
   margin-top: 25px;
+  cursor: pointer;
 }
 table {
   width: 100%;
@@ -235,6 +236,7 @@ tbody tr {
   text-align: center;
   padding: 10px;
   border-radius: 12px;
+  cursor:pointer;
 }
 .complete:hover {
   background-color: rgba(133, 174, 133, 0.868);
@@ -248,6 +250,7 @@ tbody tr {
   padding: 10px;
   border: 1px solid black;
   border-radius: 12px;
+  cursor:pointer;
 }
 .print:hover {
   background: #9b9999;
@@ -259,6 +262,7 @@ tbody tr {
 .cancel {
   background: white;
   color: red;
+  cursor: pointer;
   text-align: center;
   padding: 10px;
   border: 1px solid red;

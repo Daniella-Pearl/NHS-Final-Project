@@ -17,7 +17,7 @@ router.get('/password',(req,res)=>{
     res.render('password')
 });
 
-//add sales to the database
+//add staff to the database
 router.get("/register", (req, res) => {
   res.render("register");
 });
@@ -37,12 +37,16 @@ router.post("/register", async (req, res) => {
       inputEmail:inputEmail.toLowerCase(),
       inputPhone,
       inputNIN:inputNIN.toUpperCase(),
-      inputRole,
-      inputPassword,
+      inputRole
     });
     console.log(newUser);
-    await newUser.save();
-    res.redirect("/");
+    await Register.register(newUser,req.body.inputPassword, (err) =>{
+      if(err){
+        return res.redirect("/register")
+      }
+      res.redirect("/");
+    });
+    res.redirect("/")
   } catch (error) {
     console.error(error)
     res.render ("register", { error:error.message})

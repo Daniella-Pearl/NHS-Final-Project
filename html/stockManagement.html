@@ -40,13 +40,12 @@
             ><i class="fa fa-box"></i> <span>Stock Management Form</span></a
           >
           <a href="./inventory.html" class="nav-link"
-            ><i class="fa fa-shopping-cart"></i>
-            <span>Stock Inventory</span></a
+            ><i class="fa fa-shopping-cart"></i> <span>Stock Inventory</span></a
           >
           <a href="#" class="nav-link"
             ><i class="fa fa-users"></i> <span>Supplier Credit</span></a
           >
-          
+
           <a href="./messages.html" class="nav-link"
             ><i class="fa fa-comment-dots"></i> <span>Messages</span></a
           >
@@ -60,157 +59,188 @@
           <h2>Stock Management</h2>
           <div class="user-info">
             <span class="badge"
-              >Stock Management <a href=""><i class="fa fa-circle-user"></i
-            ></a></span>
+              >Stock Management <a href=""><i class="fa fa-circle-user"></i></a
+            ></span>
           </div>
         </header>
         <div class="action-row">
           <button type="submit" class="btn-action btn-green">
             <i class="fa-solid fa-plus"></i> Add New Stock
           </button>
-          <button type="submit" class="btn-action btn-green">View Inventory</button>
-          <button type="submit" class="btn-action btn-green">Supplier Credit</button>
+          <button type="submit" class="btn-action btn-green">
+            View Inventory
+          </button>
+          <button type="submit" class="btn-action btn-green">
+            Supplier Credit
+          </button>
         </div>
-         <section class="stats-row">
-        <div class="stat-card">
-          <span class="stat-label">Total Inventory Value</span>
-          <span class="stat-value">UGX 4,250,000</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label">Total Owed (Credit)</span>
-          <span class="stat-value" style="color: #dc3545">UGX 250,000</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label">Low Stock Items</span>
-          <span class="stat-value" style="color: #ff9800">12</span>
-        </div>
-      </section>
-      <section class="content-card" id="supplier-credit-view">
-        <div class="card-header">
-          <h2>
-            <i class="fa-solid fa-hand-holding-dollar"></i> Supplier Credit
-            Ledger
-          </h2>
-        </div>
-        <div class="table-responsive">
-          <table>
-            <thead>
-              <tr>
-                <th>Supplier Name</th>
-                <th>Total Amount Owed</th>
-                <th>Amount Paid</th>
-                <th>Balance Due</th>
-                <th>Payment Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>John Ltd</strong></td>
-                <td>200,000</td>
-                <td>50,000</td>
-                <td><strong style="color: #dc3545">150,000</strong></td>
-                <td><span>Partially Paid</span></td>
-                <td><button type="submit" class="btn-action btn-green">Make Payment</button></td>
-              </tr>
-              <tr>
-                <td><strong>Kate Co</strong></td>
-                <td>100,000</td>
-                <td>0</td>
-                <td><strong style="color: #dc3545">100,000</strong></td>
-                <td><span class="status out-of-stock">Unpaid</span></td>
-                <td><button type="submit" class="btn-action btn-green">Make Payment</button></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section class="content-card">
-        <div class="card-header">
-          <h2>Stock Inventory</h2>
-        </div>
-        <div class="table-responsive">
+        <section class="stats-row">
+          <div class="stat-card">
+            <span class="stat-label">Total Inventory Value</span>
+            <span class="stat-value">UGX 4,250,000</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Total Owed (Credit)</span>
+            <span class="stat-value" style="color: #dc3545">UGX 250,000</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Low Stock Items</span>
+            <span class="stat-value" style="color: #ff9800">12</span>
+          </div>
+        </section>
+        <section class="content-card" id="supplier-credit-view">
+          <div class="card-header">
+            <h2>
+              <i class="fa-solid fa-hand-holding-dollar"></i> Supplier Credit
+              Ledger
+            </h2>
+          </div>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Supplier Name</th>
+                  <th>Total Amount Owed</th>
+                  <th>Amount Paid</th>
+                  <th>Balance Due</th>
+                  <th>Payment Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>John Ltd</strong></td>
+                  <td>200,000</td>
+                  <td>50,000</td>
+                  <td><strong style="color: #dc3545">150,000</strong></td>
+                  <td><span>Partially Paid</span></td>
+                  <td>
+                    <button type="submit" class="btn-action btn-green">
+                      Make Payment
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Kate Co</strong></td>
+                  <td>100,000</td>
+                  <td>0</td>
+                  <td><strong style="color: #dc3545">100,000</strong></td>
+                  <td><span class="status out-of-stock">Unpaid</span></td>
+                  <td>
+                    <button type="submit" class="btn-action btn-green">
+                      Make Payment
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="content-card">
+          <div class="card-header">
+            <h2>Stock Inventory</h2>
+          </div>
+          <div class="table-responsive">
             <div class="table-container">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Product Name</th>
-                <th>Quantity</th>
-                <th>Unit Cost</th>
-                <th>Supplier Name</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Sugar</strong></td>
-                <td>50</td>
-                <td>3,000</td>
-                <td>John Ltd</td>
-                <td><span class="status in-stock">In Stock</span></td>
-                <td>
-                  <button class="action-btn edit btn">
-                    <i class="fa-solid fa-pen"></i>
-                  </button>
-                  <button class="action-btn delete btn">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
-        </div>
-      </section>
-      <section class="content-card">
-        <div class="card-header">
-          <h2 id="stform">Add / Update Stock</h2>
-        </div>
-        <form class="stock-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Product Name</label>
-              <input type="text" placeholder="e.g. Cement" />
-            </div>
-            <div class="form-group">
-              <label>Date</label>
-              <input type="date" />
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Cost</th>
+                    <th>Supplier Name</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Sugar</strong></td>
+                    <td>50</td>
+                    <td>3,000</td>
+                    <td>John Ltd</td>
+                    <td><span class="status in-stock">In Stock</span></td>
+                    <td>
+                      <button class="action-btn edit btn">
+                        <i class="fa-solid fa-pen"></i>
+                      </button>
+                      <button class="action-btn delete btn">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
+        </section>
+        <section class="content-card">
+          <div class="card-header">
+            <h2 id="stform">Add / Update Stock</h2>
+          </div>
+          <form class="stock-form" action="" method="">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="search" id="productName" name="productName" placeholder="e.g. Cement" />
+              </div>
+              <div class="form-group">
+                <label for="productPurchaseDate">Date</label>
+                <input type="date" id="productPurchaseDate" name="productPurchaseDate" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="supplierName">Supplier Name</label>
+                <input type="search" id="supplierName" name="supplierName" placeholder="e.g. Hima Cement" />
+              </div>
+              <div class="form-group">
+                <label for="productCostPrice">Buying Cost</label>
+                <input type="number" id="productCostPrice" name="productCostPrice" placeholder="Ugx.20000" />
+              </div>
+            </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label>Quantity</label>
-              <input type="number" placeholder="0" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="productQuantity">Quantity</label>
+                <input type="number" id="productQuantity" name="productQuantity" placeholder="0" />
+              </div>
+              <div class="form-group">
+                <label for="productSoldPrice">Selling Cost</label>
+                <input type="number" id="productCostPrice" name="productCostPrice" placeholder="Ugx.25000" />
+              </div>
             </div>
-            <div class="form-group">
-              <label>Supplier Name</label>
-              <select>
-                <option>Select Supplier</option>
-                <option>John Ltd</option>
-                <option>Kate Co</option>
-              </select>
-            </div>
-          </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label>Unit Cost</label>
-              <input type="number" placeholder="0.00" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="productPatment">Payment Method</label>
+                <select name="productPayment" id="productPayment"> 
+                  <option value="">Payment method</option>
+                  <option value="Cash">Cash</option>
+                  <option value="Credit">Credit</option>
+                  <option value="Bank">Bank</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="materials">Category</label>
+                <select name="productCategory" id="materials">
+                  <option value="">Choose category</option>
+                  <option value="structural">
+                    Structural and Binding Materials
+                  </option>
+                  <option value="fasteners">Fasteners</option>
+                  <option value="roofing_fencing">Roofing and Fencing</option>
+                  <option value="equipment">Equipment</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label>Transportation Cost</label>
-              <input type="text" placeholder="Auto" />
-            </div>
-          </div>
 
-          <div class="form-actions">
-            <button type="submit" class="btn btn-add">Save Stock</button>
-            <button type="button" class="btn btn-update">Update Stock</button>
-          </div>
-        </form>
-      </section>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-add">Save Stock</button>
+              <button type="button" class="btn btn-update">Update Stock</button>
+            </div>
+          </form>
+        </section>
       </div>
     </div>
   </body>

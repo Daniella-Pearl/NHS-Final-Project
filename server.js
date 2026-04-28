@@ -3,10 +3,14 @@ const express = require("express");
 const expressSession = require("express-session");
 const path = require("path");
 const mongoose = require('mongoose');
+const passport = require('passport')
 
 require('dotenv').config();
 //always after dotenv config
 const connectDb = require('./config/db');  //to import file in db.js
+
+//impost usermodel
+const Register = require('./models/Register')
 
 // 2. Instantiations
 const app = express();
@@ -30,6 +34,15 @@ app.use(
     saveUninitialized: false,
   }),
 );
+
+//Initializing passport into Express App
+app.use(passport.initialize());
+app.use(passport.session());
+
+//passport configurations
+passport.use(Register.createStrategy());
+passport.serializeUser(Register.serializeUser());
+passport.deserializeUser(Register.deserializeUser());
 
 // 5. Routes
 app.use("/", require("./routes/registerRoutes"));
