@@ -46,6 +46,7 @@ passport.deserializeUser(Register.deserializeUser());
 
 // 5. Routes
 app.use("/", require("./routes/registerRoutes"));
+app.use("/", require("./routes/formRoutes"));
 
 
 

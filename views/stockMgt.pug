@@ -1,0 +1,205 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title NyondoStock
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(rel='stylesheet' href='/css/dashboard.css')
+  link(rel='stylesheet' href='/css/stockmgt.css')
+  link(href='https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')
+.container
+  nav.sidebar
+    .brand
+      img.logo(src='/images/generated-1774986091754.png' alt='NyondoStock')
+      h1 NyondoStock System
+      p Stock Management
+    .nav-menu-container
+      a.nav-link(href='#')
+        i.fa.fa-th-large
+        span Dashboard
+      a.nav-link(href='./supplierreg.html')
+        i.fa.fa-users
+        span Supplier Registration
+      a.nav-link(href='stockmgtpage.html#stform')
+        i.fa.fa-box
+        span Stock Management Form
+      a.nav-link(href='./inventory.html')
+        i.fa.fa-shopping-cart
+        span Stock Inventory
+      a.nav-link(href='#')
+        i.fa.fa-users
+        span Supplier Credit
+      a.nav-link(href='./messages.html')
+        i.fa.fa-comment-dots
+        span Messages
+      a.nav-link(href='./landingPage.html')
+        i.fa.fa-right-from-bracket
+        span Log out
+  .main-content
+    header.topbar
+      h2 Stock Management
+      .user-info
+        span.badge
+          | Stock Management 
+          a(href='')
+            i.fa.fa-circle-user
+    .action-row
+      button.btn-action.btn-green(type='submit')
+        i.fa-solid.fa-plus
+        |  Add New Stock
+      button.btn-action.btn-green(type='submit')
+        | View Inventory
+      button.btn-action.btn-green(type='submit')
+        | Supplier Credit
+    section.stats-row
+      .stat-card
+        span.stat-label Total Inventory Value
+        span.stat-value UGX 4,250,000
+      .stat-card
+        span.stat-label Total Owed (Credit)
+        span.stat-value(style='color: #dc3545') UGX 250,000
+      .stat-card
+        span.stat-label Low Stock Items
+        span.stat-value(style='color: #ff9800') 12
+    section#supplier-credit-view.content-card
+      .card-header
+        h2
+          i.fa-solid.fa-hand-holding-dollar
+          |  Supplier Credit
+          |               Ledger
+      .table-responsive
+        table
+          thead
+            tr
+              th Supplier Name
+              th Total Amount Owed
+              th Amount Paid
+              th Balance Due
+              th Payment Status
+              th Action
+          tbody
+            tr
+              td
+                strong John Ltd
+              td 200,000
+              td 50,000
+              td
+                strong(style='color: #dc3545') 150,000
+              td
+                span Partially Paid
+              td
+                button.btn-action.btn-green(type='submit')
+                  | Make Payment
+            tr
+              td
+                strong Kate Co
+              td 100,000
+              td 0
+              td
+                strong(style='color: #dc3545') 100,000
+              td
+                span.status.out-of-stock Unpaid
+              td
+                button.btn-action.btn-green(type='submit')
+                  | Make Payment
+    section.content-card
+      .card-header
+        h2 Stock Inventory
+      .table-responsive
+        .table-container
+          table.table
+            thead
+              tr
+                th Product Name
+                th Quantity
+                th Unit Cost
+                th Supplier Name
+                th Status
+                th Actions
+            tbody
+              tr
+                td
+                  strong Sugar
+                td 50
+                td 3,000
+                td John Ltd
+                td
+                  span.status.in-stock In Stock
+                td
+                  button.action-btn.edit.btn
+                    i.fa-solid.fa-pen
+                  button.action-btn.delete.btn
+                    i.fa-solid.fa-trash
+    section.content-card
+      .card-header
+        h2#stform Add / Update Stock
+      form.stock-form(action='/stock' method='post')
+        .form-row
+          .form-group
+            label(for='goods-search') Product Name
+            input#goods-search(list='goods-list' name='item_selection' placeholder='Type to search...')
+            datalist#goods-list
+              // Structural and Binding Materials
+              option(value='Cement (cem iiN)')
+              option(value='Cement (cem iiiN)')
+              option(value='Iron Bars (10 mm)')
+              option(value='Iron Bars (12 mm)')
+              option(value='Iron Bars (16 mm)')
+              // Fasteners
+              option(value='Nails (1 inch)')
+              option(value='Nails (3 inch)')
+              option(value='Nails (4 inch)')
+              option(value='Nails (5 inch)')
+              option(value='Roofing Nails (5 kg packs)')
+              // Roofing and Fencing
+              option(value='Iron Sheets')
+              option(value='Barbed Wire (High Tensile)')
+              option(value='Barbed Wire (Low Tensile)')
+              option(value='Wire Mesh')
+              // Equipment
+              option(value='Wheelbarrows')
+          .form-group
+            label(for='productUnit') Unit Tpe
+            select#productUnit(name='productUnit')
+              option(value='') Measured In
+              option(value='Kgs') Kgs
+              option(value='Box/Bags') Box/Bags
+              option(value='Bars') Bars
+              option(value='Pieces') Pieces
+              option(value='Other') Other
+        .form-row
+          .form-group
+            label(for='supplierName') Supplier Name
+            input#supplierName(type='search' name='supplierName' placeholder='e.g. Hima Cement')
+          .form-group
+            label(for='productCostPrice') Buying Cost
+            input#productCostPrice(type='number' name='productCostPrice' placeholder='Ugx.20000')
+        .form-row
+          .form-group
+            label(for='productQuantity') Quantity
+            input#productQuantity(type='number' name='productQuantity' placeholder='0')
+          .form-group
+            label(for='productSoldPrice') Selling Cost
+            input#productCostPrice(type='number' name='productSellPrice' placeholder='Ugx.25000')
+        .form-row
+          .form-group
+            label(for='productPayment') Payment Method
+            select#productPayment(name='productPayment')
+              option(value='') Payment method
+              option(value='Cash') Cash
+              option(value='Credit') Credit
+              option(value='Bank') Bank
+          .form-group
+            label(for='materials') Category
+            select#materials(name='productCategory')
+              option(value='') Choose category
+              option(value='structural')
+                | Structural and Binding Materials
+              option(value='fasteners') Fasteners
+              option(value='roofing_fencing') Roofing and Fencing
+              option(value='equipment') Equipment
+        .form-actions
+          button.btn.btn-add(type='submit') Save Stock
+          button.btn.btn-update(type='button') Update Stock
